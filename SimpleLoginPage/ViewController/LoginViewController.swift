@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  SimpleLoginPage
 //
 //  Created by Gan Jun Jie on 18/02/2019.
@@ -21,14 +21,20 @@ class LoginViewController: UIViewController {
     @IBAction func signIn(_ sender: Any) {
         // condition checking
         guard let username = tf_username.text, username.count > 0 else {
-            
+            self.presentAlert(title: "Warning", message: "Please input Username.")
             return
         }
         guard let password = tf_password.text, password.count > 0 else {
-            
+            self.presentAlert(title: "Warning", message: "Please input Password.")
             return
         }
-        // continue to show detail page.
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "DetailPageViewController") as! DetailPageViewController
+        controller.username = username
+        self.present(controller, animated: true, completion: nil)
+    }
+    
+    deinit {
+        print("Deinitialising LoginViewController")
     }
 }
 

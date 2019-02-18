@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleLoginPage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="SimpleLoginPage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,6 @@
                                         <state key="normal" title="Sign In"/>
                                         <connections>
                                             <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qOr-bc-YeE"/>
-                                            <segue destination="PIR-Tt-Ia5" kind="show" id="sdc-Ca-6Tu"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account yet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8a-bm-yUT">
@@ -112,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="130.40000000000001" y="131.78410794602701"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Registration-->
         <scene sceneID="XVp-zb-VuD">
             <objects>
-                <tableViewController id="J9L-9Q-BjG" sceneMemberID="viewController">
+                <tableViewController id="J9L-9Q-BjG" customClass="RegistrationTableViewController" customModule="SimpleLoginPage" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="a69-YW-QC0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,6 +205,9 @@
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="dbL-HE-Emf"/>
                                                     </constraints>
                                                     <state key="normal" title="Submit"/>
+                                                    <connections>
+                                                        <action selector="submitAction:" destination="J9L-9Q-BjG" eventType="touchUpInside" id="ywv-CS-X8V"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -223,9 +225,18 @@
                             <outlet property="delegate" destination="J9L-9Q-BjG" id="xWC-lP-jcr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="kUN-uK-dbb">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="j0e-KL-6We"/>
+                    <navigationItem key="navigationItem" title="Registration" id="kUN-uK-dbb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="j0e-KL-6We">
+                            <connections>
+                                <action selector="cancelAction:" destination="J9L-9Q-BjG" id="6Z5-Ji-GqT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tf_name" destination="fjh-Qb-Oxe" id="eEo-Vv-2F6"/>
+                        <outlet property="tf_password" destination="U2i-bO-kAE" id="wYV-5S-kR8"/>
+                        <outlet property="tf_username" destination="kK4-ag-bCL" id="ugU-Mk-CnN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQv-qD-VOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -247,10 +258,10 @@
             </objects>
             <point key="canvasLocation" x="860" y="132"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Page View Controller-->
         <scene sceneID="tjG-pJ-OK6">
             <objects>
-                <viewController id="PIR-Tt-Ia5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PIR-Tt-Ia5" customClass="DetailPageViewController" customModule="SimpleLoginPage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8q9-lf-E11">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,6 +292,9 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="FDR-lk-U1X"/>
                                 </constraints>
                                 <state key="normal" title="Return"/>
+                                <connections>
+                                    <action selector="returnAction:" destination="PIR-Tt-Ia5" eventType="touchUpInside" id="TVE-qg-MuI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -294,6 +308,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SJ1-eS-Dtr"/>
                     </view>
+                    <connections>
+                        <outlet property="lbl_username" destination="RwD-2v-LCN" id="deC-bG-muJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJc-xl-ghs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
