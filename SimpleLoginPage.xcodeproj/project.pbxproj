@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		E54AC1F7221AEA8E00593825 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54AC1F6221AEA8E00593825 /* RoundedButton.swift */; };
+		E54AC1FD221AF65C00593825 /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54AC1FC221AF65C00593825 /* RegistrationTableViewController.swift */; };
+		E54AC200221AF72900593825 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54AC1FF221AF72900593825 /* UIViewController.swift */; };
+		E54AC202221AFA1E00593825 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54AC201221AFA1E00593825 /* DetailPageViewController.swift */; };
 		E57A917E221AE4DD00461B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57A917D221AE4DD00461B7D /* AppDelegate.swift */; };
-		E57A9180221AE4DD00461B7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57A917F221AE4DD00461B7D /* ViewController.swift */; };
+		E57A9180221AE4DD00461B7D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57A917F221AE4DD00461B7D /* LoginViewController.swift */; };
 		E57A9183221AE4DD00461B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57A9181221AE4DD00461B7D /* Main.storyboard */; };
 		E57A9185221AE4DD00461B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E57A9184221AE4DD00461B7D /* Assets.xcassets */; };
 		E57A9188221AE4DD00461B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57A9186221AE4DD00461B7D /* LaunchScreen.storyboard */; };
@@ -36,9 +39,12 @@
 
 /* Begin PBXFileReference section */
 		E54AC1F6221AEA8E00593825 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		E54AC1FC221AF65C00593825 /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
+		E54AC1FF221AF72900593825 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		E54AC201221AFA1E00593825 /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 		E57A917A221AE4DD00461B7D /* SimpleLoginPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleLoginPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57A917D221AE4DD00461B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E57A917F221AE4DD00461B7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E57A917F221AE4DD00461B7D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E57A9182221AE4DD00461B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E57A9184221AE4DD00461B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E57A9187221AE4DD00461B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,6 +85,7 @@
 		E54AC1F4221AEA7200593825 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E54AC1FE221AF71000593825 /* Extension */,
 				E54AC1F5221AEA7E00593825 /* UI */,
 			);
 			path = Common;
@@ -90,6 +97,32 @@
 				E54AC1F6221AEA8E00593825 /* RoundedButton.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		E54AC1FA221AF61E00593825 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E57A9181221AE4DD00461B7D /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E54AC1FB221AF62D00593825 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E57A917F221AE4DD00461B7D /* LoginViewController.swift */,
+				E54AC1FC221AF65C00593825 /* RegistrationTableViewController.swift */,
+				E54AC201221AFA1E00593825 /* DetailPageViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E54AC1FE221AF71000593825 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E54AC1FF221AF72900593825 /* UIViewController.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		E57A9171221AE4DD00461B7D = {
@@ -116,9 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				E54AC1F4221AEA7200593825 /* Common */,
+				E54AC1FA221AF61E00593825 /* View */,
+				E54AC1FB221AF62D00593825 /* ViewController */,
 				E57A917D221AE4DD00461B7D /* AppDelegate.swift */,
-				E57A917F221AE4DD00461B7D /* ViewController.swift */,
-				E57A9181221AE4DD00461B7D /* Main.storyboard */,
 				E57A9184221AE4DD00461B7D /* Assets.xcassets */,
 				E57A9186221AE4DD00461B7D /* LaunchScreen.storyboard */,
 				E57A9189221AE4DD00461B7D /* Info.plist */,
@@ -207,7 +240,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Gan Jun Jie";
 				TargetAttributes = {
 					E57A9179221AE4DD00461B7D = {
@@ -278,9 +311,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E57A9180221AE4DD00461B7D /* ViewController.swift in Sources */,
+				E54AC202221AFA1E00593825 /* DetailPageViewController.swift in Sources */,
+				E57A9180221AE4DD00461B7D /* LoginViewController.swift in Sources */,
 				E54AC1F7221AEA8E00593825 /* RoundedButton.swift in Sources */,
+				E54AC1FD221AF65C00593825 /* RegistrationTableViewController.swift in Sources */,
 				E57A917E221AE4DD00461B7D /* AppDelegate.swift in Sources */,
+				E54AC200221AF72900593825 /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +385,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -356,6 +393,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -406,6 +444,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -413,6 +452,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
